@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RetrofitTestCode</string>
+
+    <string name="img_url" formatted="false">https://www.metaweather.com/static/img/weather/png/64/%s.png</string>
+</resources>
