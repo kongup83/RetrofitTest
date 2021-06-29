@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Context
 import android.graphics.drawable.AnimationDrawable
 import android.util.TypedValue
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.kongup.main.R
@@ -32,12 +33,14 @@ class MyProgressDialog(context: Context, resourceIdOfImage: Int) : Dialog(contex
             mAnimation = mImg.drawable as AnimationDrawable
 
         addContentView(layout, params)
+
+        window?.clearFlags( WindowManager.LayoutParams.FLAG_DIM_BEHIND )
     }
 
     override fun show()
     {
         super.show()
-        mAnimation?.start()
+        mAnimation.start()
     }
 
     fun convertPixelsToDp(px: Float): Int
